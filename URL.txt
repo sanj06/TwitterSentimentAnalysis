@@ -1,0 +1,18 @@
+Elastic Search : localhost:9200
+Kibana : localhost:5601
+
+
+if(C.status):
+            res = C.display()
+            g.set_value(res[len(res)-1])
+            for i in range(0,len(res)-1):
+                row = res[i]
+                t.add_row(row)
+        else:
+            print ("status is false")
+
+
+
+
+C = Controller()
+C.search('modi','in')
